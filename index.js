@@ -219,11 +219,11 @@ function command() {
       cleanState();
     } else {
       console.log(chalk.yellow(''), chalk.whiteBright(`Invalid command!`));
-      command();
     }
-    rl.close();
+    rl.close();  // Move this line inside the callback
   });
 }
+
 
 setTimeout(() => {
   command();
